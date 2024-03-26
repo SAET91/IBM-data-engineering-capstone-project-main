@@ -1,0 +1,13 @@
+mongoimport -u root -p MjU5MDAtc2ViYWVu --authenticationDatabase admin --db catalog --collection electronics --file catalog.json
+
+mongosh -u root -p MjU5MDAtc2ViYWVu --authenticationDatabase admin
+
+db.electronics.createIndex({ "type": 1 })
+{
+    "createdCollectionAutomatically": false,
+    "numIndexesBefore" : 1,
+    "numIndexesAfter" : 2,
+    "ok" : 1
+}
+
+mongoexport -u root -p MjU5MDAtc2ViYWVu --authenticationDatabase admin --db catalog --collection electronics --out electronics.csv --type=csv --fields _id,type,model

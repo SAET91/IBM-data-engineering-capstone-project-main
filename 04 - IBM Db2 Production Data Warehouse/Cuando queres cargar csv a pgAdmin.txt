@@ -1,0 +1,15 @@
+cuando queria cargar el csv a las tablas me daba error al cargar y es porque tenes que cargar el csv sin encabezado
+osea asi
+1,Electronics
+2,Books
+3,Toys
+4,Sports
+5,Software
+
+en vez de asi
+categoryid,category
+1,Electronics
+2,Books
+3,Toys
+4,Sports
+5,Software
